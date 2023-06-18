@@ -1,38 +1,37 @@
 * La domanda di Piccio
 Il mio amico Piccio mi ha chiesto "Perché Emacs ti appassiona così tanto?"
-Piccio, ti rispondo con un video, 5 minuti cronometrati.
+Piccio, ti rispondo con un video, 5 minuti cronometrati. Via!
 
 Non perché "Con Emacs si può fare tutto".
 * 
   * C'è il mito che Emacs sia bloated. 
   * un sistema operativo
-  * ci navighi internet, ci giochi a tetris
-    * È davvero così
+  * ci navighi internet
+    * Ora, a parte che è vero, se programmi in TypeScript vorrai pure vedere una preview...
   * Ma non è quello il punto.
 
 * Confronto con VS Code
-    * voglio dire, VS Code ha 47.000 estensioni
-    * Con VS Code apri PDF, guardi video, componi musica, disegni diagrammi, giochi, guardi gatti
+    * VS Code ha 47.000 estensioni
+    * Con VS Code apri PDF, guardi video, componi musica, disegni diagrammi, guardi gatti
     * è un cavolo di browser
-    * Qual era l'editor bloated?
     * Eppure, leggi ovunque: "è lightweight"
 
   * Non sono così tanti
-    * Ok, torniamo a Emacs
+    * Tornando a Emacs,
     * Emacs non è migliore perché ha più plugin
     * La questione è la natura di questi plugin
-    * Facciamo così, lanciamolo
+    * OK, lanciamolo
 
 
 * Apriamo Emacs
   * Ecco, vedi, capisci che molti si fermino qui.
     Fa schifo! È inguardabile!
-  * Però, però* Intanto, è un po' come per Linux: ci sono diverse distribuzioni
+  * Però, però* Intanto, come per Linux: ci sono diverse distribuzioni
     * c'è Doom
     * c'è Spacemacs
     * c'è Prelude
 
-  * Ma in genere le persone customizzano Emacs all'inverosimile e lo fanno diventare così
+  * In genere le persone customizzano Emacs all'inverosimile e lo fanno diventare così
     * Il mio è questo.
   * Questo è il REPL di Python
     * e quello di Haskell
@@ -43,7 +42,7 @@ Non perché "Con Emacs si può fare tutto".
 
 * Non un editor
   * Ok, e qui arriviamo al punto.
-    Emacs non è editor.
+    Emacs non è un editor.
     Emacs è il rutime di un linguaggio di programmazione
     interattivo
     e specializzato nella manipolazione di testi
@@ -68,7 +67,7 @@ Non perché "Con Emacs si può fare tutto".
       * In Vim: J va giù, K va su
       * In Emacs: Ctrl-n va giù, Ctrl-p va su
       * Ma sono del tutto arbitrari. Anche le funzioni sono arbitrarie, le puoi scrivere tu!
-      * Se vuoi, usi Evil mode, che rende Emacs uguale a Vim
+      * Se vuoi, usi Evil mode, così rendi Emacs uguale a Vim
 
 	
   * Comandi
@@ -76,14 +75,14 @@ Non perché "Con Emacs si può fare tutto".
 	ci scrivi quotidianamente minuscoli programmini.
 	In Vim, scrivi al volo dei piccoli programmini per risolvere un piccolo problema di editing.
 	(esempio)
-	In Emacs fai lo stesso, e spesso persisti quel piccolo programmino
+	In Emacs fai lo stesso, solo che spesso persisti il risultato
 	così la prossima volta lo riutilizzi
 	ci costruisca sopra qualcosa di più elaorato.
-       * Emacs è una live experience, lo costruisci a colpi di piccoli aggiustamenti, un giorno dopo l'altro
+       * Insomma, è una live experience, lo costruisci a colpi di piccoli aggiustamenti, un giorno dopo l'altro
 
         * Per esempio, in Markdown scrivo un titolo
 	  e poi faccio =
-	* Che noia. Il programmatore vuole che io scriva
+	* Che noia. Il programmatore che è in me vuole che io scriva
 	* ..........
 	* Ecco, adesso l'associo a uno shortcut
 	* E d'ora in poi, tadà
@@ -110,10 +109,11 @@ Non perché "Con Emacs si può fare tutto".
 
   
 * Nella pratica
-  * tutto è testo
+  * Le cose ganze di Emacs sono 3.
+  * 1. tutto è testo
   * Guardiamo il contenuto di una directory, con dired
   * dired
-    * Non è bloccante come i classici dialog
+    * Non è bloccante come negli altri editor
     * è testo, puoi copiare, cercare
     * Guarda, per muovere il curore hai ace-jump
       Hai il cursore qui
@@ -122,8 +122,6 @@ Non perché "Con Emacs si può fare tutto".
       e ci vai in un salto solo
     * E, chiaro, funziona anche in dired, è testo
     * Modifichi come testo, poi rifletti il risultato sul filesystem
-    * selezioni dei file
-    * li rinomini
       * rinominare con rectangle
     * Guardi più directory insieme
       * magari nascondi le directory che non ti interessano
@@ -153,6 +151,8 @@ Non perché "Con Emacs si può fare tutto".
 
   
 * E poi, la cura al dettaglio. Guarda qui
+  * 2. La cura del dettaglio. L'eccellenza.
+  * Ti faccio degli esempi
   * Emacs non tratta gli elementi markdown come testo
     sa che una colonna è una colonna
     aggiungo, sposto, cancello, ruoto la tabella
@@ -160,8 +160,8 @@ Non perché "Con Emacs si può fare tutto".
     Oppure: scrivo scrivo scrivo. Faccio undo. Occhio adesso. Faccio una modifica.
     Qui la storia ha divergiu, divers, ho perso un pezzo di storia. Giusto?
     Macché. Guarda, eccol la storia, i suoi branch in tempo reale.
-  * Oppure guarda il client Git
-    * è una collezione di funzioni riutilizzabili, combinate come UI
+  * Oppure guarda Magit
+    * un wrapper di tutte le funzioni di basso livello di Git, combinate come GUI
     * stage di un file
     * di questo metto in stage solo questo hunk
       * di questo, revert
@@ -176,21 +176,20 @@ Non perché "Con Emacs si può fare tutto".
       Guarda, adesso modifico un file nel passato.
       Ganzo, no?
 
-
 * ergonomia
   * Vedi poi che non ha tab?
-  * Hai cose più potenti
+  * Hai una fuzzy search
   * cerchi per nome di file
-  * ecco i tab che ho aperto
+  * ecco i buffer che ho aperto
     chiudo questo questo e questo, vai
     
 
 * Composizione
   * I plugin non sono programmi a sé.
-    Sono componibili, davvero estendono emacs
+    Sono componibili
   * vertico visualizza elenchi di cose
   * Di cosa? Ah, non sono affari suoi, single responsiblity principle
-  * ci pensano pacchetti come consult, che sa trovare cose, ma non visualizzarle
+  * ci pensa consult, che sa trovare cose, ma non visualizzarle
   * marginalia aggiunge dettagli
   * evil mode rende tutto compatibile con gli shortcut di Vim
   * eglot ti collega ai language server
@@ -213,7 +212,7 @@ Non perché "Con Emacs si può fare tutto".
       Copia incolla è Alt-w, ctrl-e
       Siamo pigri e maldisposti quando ci invitano fuori dalla comfort zone
     * 3. la petulanza di persone come me, che insistono ogni giorno
-      Siamo nella stessa categoria i vegani e programmatori Rust.
+      Siamo nella stessa categoria dei vegani dei programmatori Rust.
 
 Ma ora arriviamo alla cosa più ganza di Emacs, oh no aspe...
 
