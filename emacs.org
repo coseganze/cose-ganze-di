@@ -3,216 +3,194 @@ Il mio amico Piccio mi ha chiesto "Perché Emacs ti appassiona così tanto?"
 Piccio, ti rispondo con un video, 5 minuti cronometrati. Via!
 
 Non perché "Con Emacs si può fare tutto".
-* 
-  * C'è il mito che Emacs sia bloated. 
-  * un sistema operativo
-  * ci navighi internet
-    * Ora, a parte che è vero, se programmi in TypeScript vorrai pure vedere una preview...
+* Sistema operativo
+  * C'è il mito che sia un sistema operativo
+  * Ci navighi su internet!
+  * Beh, ci mancherebbe. Se scrivi TypeScript e vuoi una preview...
+  * Se vuoi usare Copilot, o mandare una mail
+  * Se vuoi usare Language Server Protocol con Go, Python, Haskell
+  * beh, perché non dovrebbe essere possibile? Certo che ci puoi fare tutto
   * Ma non è quello il punto.
-
 * Confronto con VS Code
     * VS Code ha 47.000 estensioni
-    * Con VS Code apri PDF, guardi video, componi musica, disegni diagrammi, guardi gatti
-    * è un cavolo di browser
-    * Eppure, leggi ovunque: "è lightweight"
+    * Anche con VS Code apri PDF, guardi video, componi musica, disegni diagrammi, guardi gatti
+    * alla fine è un browser
+    * Eppure, leggi ovunque: "è lightweight". Bugia.
 
-  * Non sono così tanti
-    * Tornando a Emacs,
+* Eccellenza  
     * Emacs non è migliore perché ha più plugin
-    * La questione è la natura di questi plugin
-    * OK, lanciamolo
 
+* 3 motivi
+    * Emacs è ganzo per 3 motivi
 
-* Apriamo Emacs
-  * Ecco, vedi, capisci che molti si fermino qui.
-    Fa schifo! È inguardabile!
-  * Però, però* Intanto, come per Linux: ci sono diverse distribuzioni
-    * c'è Doom
-    * c'è Spacemacs
-    * c'è Prelude
-
-  * In genere le persone customizzano Emacs all'inverosimile e lo fanno diventare così
-    * Il mio è questo.
-  * Questo è il REPL di Python
-    * e quello di Haskell
-    * Diresti che Python e Haskell facciano schifo perché hanno un REPL meh?
-    
-1'
-
-
-* Non un editor
-  * Ok, e qui arriviamo al punto.
-    Emacs non è un editor.
-    Emacs è il rutime di un linguaggio di programmazione
-    interattivo
-    e specializzato nella manipolazione di testi
-    al punto che lo puoi usare come un editor
-
-  * Andiamo nel pratico.
-    
-  * Ok, questo è una specie di REPL
-    Come i tutti i REPL, puoi invocare delle funzioni
-  * Qui è la ganzata: tutto in Emacs è una funzione
-    * Gua, qui gli diciamo:
-      * apri un'altra finestra
-      * scrivi "Cruel world"
-      * vai all'inizio della riga
-      * Cancella una parola
-      * Scrivi "Hello"
-      * Metti una maiuscola alla prossima parola
-	
-  * Ora, nessuno edita i testi così, ti torna?
-  * Invece, associ degli shortcut a quelle funzioni
-    * Ci sono shortcut di default
-      * In Vim: J va giù, K va su
-      * In Emacs: Ctrl-n va giù, Ctrl-p va su
-      * Ma sono del tutto arbitrari. Anche le funzioni sono arbitrarie, le puoi scrivere tu!
-      * Se vuoi, usi Evil mode, così rendi Emacs uguale a Vim
-
-	
-  * Comandi
-    * Emacs è ganzo perché
-	ci scrivi quotidianamente minuscoli programmini.
-	In Vim, scrivi al volo dei piccoli programmini per risolvere un piccolo problema di editing.
-	(esempio)
-	In Emacs fai lo stesso, solo che spesso persisti il risultato
-	così la prossima volta lo riutilizzi
-	ci costruisca sopra qualcosa di più elaorato.
-       * Insomma, è una live experience, lo costruisci a colpi di piccoli aggiustamenti, un giorno dopo l'altro
-
-        * Per esempio, in Markdown scrivo un titolo
-	  e poi faccio =
-	* Che noia. Il programmatore che è in me vuole che io scriva
-	* ..........
-	* Ecco, adesso l'associo a uno shortcut
-	* E d'ora in poi, tadà
-      * Capisci? Non potevo aspettarmi che qualcuno avesse scritto un plugin solo per questo.
-	Troppo custom.
-
-    * init.el
-      * Finisci per avere customizzazioni come questa
-          * C'è una lambda: è proprio codice
-      * Come Gian Carlo dice "Vim lo usavo per lavoro; Emacs è il mio lavoro"
-
-  
-* liberie, non programmi
-    Ci sono migliaia di funzioni built-in
-    e le puoi aprire, vedi il codice, puoi estenderle
-    e ci sono package già pronti nel marketplace
-  * da s.el https://github.com/magnars/s.el per manipolare stringhe
-  * a Magit
-    * di cui puoi usare le funzioni di basso livello, 
-    * ma che ha anche la sua interfaccia da usare, out-of-the-box
-    
-  
-2.30'
-
-  
-* Nella pratica
-  * Le cose ganze di Emacs sono 3.
-  * 1. tutto è testo
-  * Guardiamo il contenuto di una directory, con dired
-  * dired
-    * Non è bloccante come negli altri editor
-    * è testo, puoi copiare, cercare
-    * Guarda, per muovere il curore hai ace-jump
-      Hai il cursore qui
-      e vuoi andare qua
-      gli indichi la lettera di arrivo
-      e ci vai in un salto solo
-    * E, chiaro, funziona anche in dired, è testo
-    * Modifichi come testo, poi rifletti il risultato sul filesystem
-      * rinominare con rectangle
-    * Guardi più directory insieme
-      * magari nascondi le directory che non ti interessano
-      * e ci fai girare una macro
-      * macro
-	* Una macro funziona così
-	  Fai una modifica, complessa a piacere
-	  e poi la esegui una, due, 20 volte
-	* Funziona anche in dired
-	  cambio un file
-	  e poi ripeto su altri file
-	  vedi?
-	* Ora, una macro non è altro che una variabile
-	  rammenti, stiamo lavorando con un runtime di un linguaggio di programmazione
-	  quindi la puoi editare e salvare
-	* idem la storia degli undo, delle selezioni e della clipboard
+    * 1. perché tutto è testo
+      * Come in Vim
+      * Dired
+	* Ecco il contenuto di una directory
+	* Non è bloccante. Non sto troiaio degli alti editor
+	* è testo, copi, cerchi
+	* Ti muovi con ace-jump
+	  Hai il cursore qui
+	  e vuoi andare qua
+	  gli indichi la lettera di arrivo
+	  e ci vai in un salto solo
+	* Modifichi come testo, poi, zac! proietti sul filesystem
+	* Guardi più directory insieme
+	* nascondi questo e questo
+	* e ci fai girare una macro
+	* macro
+	  * Una macro funziona così
+	    inizi, modifichi, fine macro
+	    e poi la esegui una, due, 20 volte
+	  * Funziona anche su dired
+	    Aggiungi un header qui
+	    e poi applichi qui qui e qui, vai
+	  * La macro stessa è testo
+	    la editi, la salvi
+      * REST
+	* Invece di fare clickety-click col mouse in Postman, usi le REST API
+	  via testo
+	  Testo significa cercare, salvare, versionare, insomma hai capito.
+      * vterm	  
+	* Il terminale è testo, lo lanci dentro Emacs
+	* e ti muovi libero, copi incolli, bye bye mouse
+	* Prima che lo domandi: sì, puoi lanciare Emacs dentro Emacs.
 	  
+    * 2 l'eccellenza
+      * Ovviamente hai intellisense
+	Quello che fai in Code e Vim, la fai anche in Emacs
+      * Ma la cura al dettaglio!
+      * Non c'è niente di mediocre, tutto sfiora l'eccellenza.
+      * Guarda
+      * undo-tree,
+        Scrivo scrivo scrivo. Faccio undo. Occhio adesso. Scrivo altra roba
+        Qui la storia ha divergiu... ho perso un pezzo di storia. Giusto?
+        Macché. Guarda, tutti i branch in tempo reale.
+	Perché tutti gli altri editor hanno l'undo rotto?
+      * Markdown
+	* Oppure, Emacs capisce la semantica di Markdown
+          Sa che una tabella è una tabella
+          aggiungo, sposto, cancello, ruoto la tabella
+      * magit
+	* Oppure guarda Magit
+	* stage di un file
+	* di questo metto in stage solo questo hunk
+	  * di questo, revert
+	* fare push
+	* mostrare log
+	  * mostrare che è testo
+	  * VS Code bello eh, ma tocca fa' col mouse, manco la ricerca
+	* fare rebase
 
-  * Ah, visto che un terminale è un testo, puoi lanciarlo dentro Emacs
-    * e trattarlo da testo.C-c C-t
-    * E sì, prima che lo domandi: puoi lanciare Emacs dentro Emacs.
+	* Magit è magico: è più potente di Git stesso.
+	  Guarda, adesso modifico un file nel passato.
+	  Ganzo, no?
 
-  * Tutto è testo e tutto è una funzione riutilizzabile
-    * Invece di fare clickety-click col mouse in Postman, puoi interagire col REST API
-      via testo
-      Testo significa zoom, salvare, cercare, versionare, insomma hai capito.
+      * L'ergonomia è raffinatissima
+	* Vedi non hai tab?
+	* Hai una fuzzy search
+	* cerchi per nome di file
+	  * nei risultati di grep in tempo reale
+	  * cerchi nei bookmark
+	  * nella storia della clipboard
+	* ecco i buffer che hai aperto
+          chiudi questo questo e questo, vai
+	* Emacs è furbo. Selezioni il testo da qui a.. voglio arrivare qui. Perché negli altri editor mentre selezioni devi tenere shift giù, non puoi cercare, spostarti con un bookmark, con ace jump. Emacs fa come i telefoni, hai due marker e li sposti in autonomia.
 
+      * Brutto
+	* Molti nemmeno lo sanno. Lo lanciano
+	* e capisci? si fermano qui.
+          Fa schifo! È inguardabile!
+	* Però, come per Linux: ci sono diverse distribuzioni
+	  * c'è Doom
+	  * c'è Spacemacs
+	  * c'è Prelude
+
+	* La gente customizza Emacs all'inverosimile. Dimmi che è brutto...
+	* Questi sono i REPL di Python
+	  * e di Haskell
+	  * Dimmi che Python e Haskell fanno schifo perché i REPL non sono sexy
+	  * Ok, e qui arriviamo al punto
+	    
+    * 3 Emacs non è proprio un editor
+
+      * È il rutime di un linguaggio di programmazione
+        interattivo e specializzato nella manipolazione di testi
+	
+      * Ok, questo è una specie di REPL
+          puoi invocare delle funzioni
+	* Qui è la ganzata: Tutto è testo e tutto è una funzione
+	* Gua, qui gli dici:
+	  * apri un'altra finestra
+	  * scrivi
+	  * vai all'inizio della riga
+	  * Cancella una parola
+	  * Scrivi "Hello"
+	  * Metti una maiuscola alla prossima parola
+	
+	* Nessuno edita i testi così, OK?
+	* Invece, associ degli shortcut a quelle funzioni
+	  * In Vim: J va giù, K va su
+	  * In Emacs sono Ctrl-n e Ctrl-p
+	  * Ma son del tutto arbitrari. Anche le funzioni sono arbitrarie, puoi scriverle tu!
+	  * Se vuoi, usi Evil mode, così rendi Emacs uguale a Vim, e fine delle polemiche
+        * Comandi
+	  * vim è ganzo perché scrivi al volo dei piccoli programmini per risolvere dei piccoli puzzle di editing.
+	    (esempio)
+	  * In Emacs fai lo stesso, solo che poi salvi il risultato
+	    così la prossima volta ci costruisci sopra
+	  * col tempo, ti costruisci il tuo editor.
+
+	    * Per esempio, in Markdown scrivo un titolo
+	      e poi faccio =
+	    * Che barba. Il programmatore che è in te ti farà scrivere
+	    * L'associ a uno shortcut
+	    * E d'ora in poi, tadà
+	  * Capisci? Chiaro non ci fosse un plugin,
+	    Troppo custom.
+          * Per le cose più complicate, costruisci su librerie esistenti
+	    * Guarda qui, da un video di YouTube
+	    * scarichi i sottotitoli in XML
+	    * fai il parse
+	    * e butti tutto in una tabella.
+	    * Da adesso hai un nuovo comando.
+	    * Come Gian Carlo dice "Vim lo usavo per lavoro; Emacs è il mio lavoro"
+	  * Composizione
+	    * C'è una bella differenza tra i plugin di VS Code e di Vim e quelli di Emacs
+	    * Non sono programmi a sé
+              Tutto è componibile
+	    * vertico visualizza elenchi di cose
+	    * Di cosa? Ah, non sono affari suoi, single responsiblity
+	    * ci pensa consult, che sa trovare cose, ma non visualizzarle
+	    * marginalia aggiunge dettagli
+	    * evil mode rende tutto compatibile con Vim
+	    * eglot ti collega ai language server
+	    * giochi a Lego, chi ti ferma più?
+	    * Emacs non reinventa la ruota: quando cerchi un file, sotto il cofano usa
+	      find, ripgrep o fd. Scrivi le mail, ma sotto sotto usa mbsync e notmuch
+	    * L'esatto opposto di essere bloated: Emacs è il collante dei tool di Unix
+    
   
-* E poi, la cura al dettaglio. Guarda qui
-  * 2. La cura del dettaglio. L'eccellenza.
-  * Ti faccio degli esempi
-  * Emacs non tratta gli elementi markdown come testo
-    sa che una colonna è una colonna
-    aggiungo, sposto, cancello, ruoto la tabella
-  * undo-tree,
-    Oppure: scrivo scrivo scrivo. Faccio undo. Occhio adesso. Faccio una modifica.
-    Qui la storia ha divergiu, divers, ho perso un pezzo di storia. Giusto?
-    Macché. Guarda, eccol la storia, i suoi branch in tempo reale.
-  * Oppure guarda Magit
-    * un wrapper di tutte le funzioni di basso livello di Git, combinate come GUI
-    * stage di un file
-    * di questo metto in stage solo questo hunk
-      * di questo, revert
-    * fare push
-    * mostrare log
-      * mostrare che è testo
-      * In VS Code, bello eh, ma tocca fa' col mouse, nemmeno la ricerca
-    * cambiare branch
-    * fare rebase
 
-    * Magit è magico: è più potente e pratico di Git stesso.
-      Guarda, adesso modifico un file nel passato.
-      Ganzo, no?
+* Conclusione
+  * Sicché, perché è di nicchia? Cosa blocca i programmatori?
+    3 cause
+    * 1. Una narrativa malata. 
+      È pesante! Ah no, questo è VS Code...
+      Pregiudizi di chi usa Vim
+      Tanti non sanno che è simile ma più ganzo
+    * 2, perché è molto anticonvenzionale.
+      Copia incolla
+      Siamo pigri se dobbiamo uscire dalla comfort zone
+    * 3. Poi la petulanza di persone come me
+      Siamo nella stessa categoria di vegani e programmatori Rust.
 
-* ergonomia
-  * Vedi poi che non ha tab?
-  * Hai una fuzzy search
-  * cerchi per nome di file
-  * ecco i buffer che ho aperto
-    chiudo questo questo e questo, vai
-    
+Oh, ma la cosa più ganza di tutte di Emacs, oh no aspe...
 
-* Composizione
-  * I plugin non sono programmi a sé.
-    Sono componibili
-  * vertico visualizza elenchi di cose
-  * Di cosa? Ah, non sono affari suoi, single responsiblity principle
-  * ci pensa consult, che sa trovare cose, ma non visualizzarle
-  * marginalia aggiunge dettagli
-  * evil mode rende tutto compatibile con gli shortcut di Vim
-  * eglot ti collega ai language server
-  * giochi a Lego, componi il tuo Emacs
-    
+
+
 * entry point
   * per sviluppare estensioni devi sviluppare Lisp
   * gradino di ingresso, non è uno strumento per tutti
   * qualità altissima
   * quanti dei plugin di VS Code funzioneranno ancora tra 2 anni?
-  
-
-* Conclusione
-  * Sicché, perché è così di nicchia? Cosa blocca i programmatori dal provarlo?
-    Io vedo 3 cause
-    * 1. Una narrativa malata. Pregiudizi di chi usa Vim. vìola Unix....
-      devi imparare shortcut impossibili
-      300 Mb di memoria. Ah no, questo è VS Code...
-    * 2, perché è molto anticonvenzionale.
-      Copia incolla è Alt-w, ctrl-e
-      Siamo pigri e maldisposti quando ci invitano fuori dalla comfort zone
-    * 3. la petulanza di persone come me, che insistono ogni giorno
-      Siamo nella stessa categoria dei vegani dei programmatori Rust.
-
-Ma ora arriviamo alla cosa più ganza di Emacs, oh no aspe...
-
